@@ -8,13 +8,21 @@
     "frame": true
   },
   "devDependencies": {
+    "autoprefixer-core": "^5.2.0",
     "browserify": "^10.0.0",
+    "coffeeify": "^1.1.0",
     "gulp": "^3.8.11",
+    "gulp-coffeeify": "^0.1.8",
     "gulp-concat": "^2.5.2",
     "gulp-connect": "^2.2.0",
+    "gulp-livereload": "^3.8.0",
+    "gulp-postcss": "^5.1.8",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.0.1",
     "gulp-watch": "^4.2.4",
     "react": "^0.13.2",
     "reactify": "^1.1.0",
+    "through2": "^0.6.5",
     "vinyl-source-stream": "^1.1.0"
   }
 }

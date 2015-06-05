@@ -1,0 +1,82 @@
+<div id="main" class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">Existing Projects</div>
+                <div class="panel-body">
+                    <ul>
+                        <li ng-repeat="project in existingProjects">
+                            {{ project.name }}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="panel panel-primary">
+                <div class="panel-heading">New Project</div>
+                <div class="panel-body">
+                    <form class="form-horizontal" ng-submit="create()">
+                        <div class="form-group">
+                            <label for="name" class="col-sm-3 control-label">Name</label>
+                            <div class="col-sm-9">
+                                <input type="text" id="name" class="form-control" ng-model="inputs.name" placeholder="My Project">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="dbType" class="col-sm-3 control-label">Database Type</label>
+                            <div class="col-sm-9">
+                                <select id="dbType"
+                                        class="form-control"
+                                        ng-model="inputs.dialect"
+                                        ng-options="dialect.name for dialect in dialects">
+                                </select>
+                            </div>
+                        </div>
+                        <tabset type="pills">
+                            <tab heading="Simple">
+                                <div class="form-group">
+                                    <label for="host" class="col-sm-3 control-label">Host</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" id="host" class="form-control" ng-model="inputs.host">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="db" class="col-sm-3 control-label">Database</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" id="db" class="form-control" ng-model="inputs.db">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="user" class="col-sm-3 control-label">Username</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" id="user" class="form-control" ng-model="inputs.username">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pw" class="col-sm-3 control-label">Password</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" id="pw" class="form-control" ng-model="inputs.password">
+                                    </div>
+                                </div>
+                            </tab>
+                            <tab heading="Advanced">
+                                <div class="form-group">
+                                    <label for="cs" class="col-sm-3 control-label">Connection String</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" id="cs" class="form-control" ng-model="inputs.connectionString" placeholder="See www.connectionstrings.com">
+                                    </div>
+                                </div>
+                            </tab>
+                        </tabset>
+                        <div class="form-group">
+                            <div class="col-sm-offset-4 col-sm-4">
+                                <button type="submit" class="btn btn-primary btn-block">Create</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,54 @@
+.text-middle {
+  vertical-align: middle !important;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+#wrap {
+  min-height: 100%;
+  height: auto;
+  margin: 0 auto -60px;
+  padding: 0 0 60px;
+}
+
+footer {
+  margin-top: 20px;
+  height: 40px;
+  background-color: lightgray;
+}
+
+.container-fluid .text-muted, .container .text-muted {
+  margin: 10px 0;
+}
+
+::placeholder {
+  font-style: italic;
+}
+
+.tab-content {
+  margin-top: 15px;
+}
+
+/* https://angular-ui.github.io/bootstrap/#/getting_started */
+.nav, .pagination, .carousel, .panel-title a {
+  cursor: pointer;
+}
+
+#main {
+  .panel-body {
+    height: 100%;
+  }
+}
+
+#project {
+  #screenConfig {
+    height: 400px;
+    padding: 4px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+}
